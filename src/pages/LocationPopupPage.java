@@ -20,7 +20,7 @@ public class LocationPopupPage extends BasicPage {
 
 	public WebElement getCloseElement() {
 
-		return this.driver.findElement(By.xpath("//*[contains(@class,close-btn-white)]"));
+		return this.driver.findElement(By.xpath("//*[contains(@class,'close-btn-white')]"));
 	}
 
 	public WebElement getKeyword() {
