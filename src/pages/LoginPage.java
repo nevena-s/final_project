@@ -14,21 +14,25 @@ public class LoginPage extends BasicPage {
 	}
 
 	public WebElement getUsername() {
+
 		return this.driver.findElement(By.name("username"));
 
 	}
 
 	public WebElement getPassword() {
+
 		return this.driver.findElement(By.name("password"));
 
 	}
 
 	public WebElement getRememberMe() {
+
 		return this.driver.findElement(By.name("remember_me"));
 
 	}
 
 	public WebElement getSubmitBtn() {
+
 		return this.driver.findElement(By.name("btn_submit"));
 
 	}

@@ -14,6 +14,7 @@ public class LocationPopupPage extends BasicPage {
 	}
 
 	public WebElement getHeaderLocation() {
+
 		return this.driver.findElement(By.className("location-selector"));
 
 	}
@@ -29,6 +30,7 @@ public class LocationPopupPage extends BasicPage {
 	}
 
 	public WebElement getLocationItem(String locationName) {
+
 		return this.driver.findElement(By.xpath("//li/a[contains(text(), '" + locationName + "')]/.."));
 
 	}
@@ -44,11 +46,13 @@ public class LocationPopupPage extends BasicPage {
 	}
 
 	public void openLocationDialog() {
+
 		this.getHeaderLocation().click();
 
 	}
 
 	public void closeLocationDialog() {
+
 		this.getCloseElement().click();
 
 	}
