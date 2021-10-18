@@ -13,26 +13,27 @@ public class AuthPage extends BasicPage {
 
 	}
 
-	public WebElement getNameField() {
+	// Getters
 
+	public WebElement getNameField() {
 		return this.driver.findElement(By.xpath("//*[contains(@class,'after-arrow')]"));
 
 	}
-	
-	public WebElement getMyAccount() {
 
+	public WebElement getMyAccount() {
 		return this.driver.findElement(By.xpath("//*[contains(text(),'My Account')]"));
 
 	}
-	
-	public WebElement getLogout() {
 
+	public WebElement getLogout() {
 		return this.driver.findElement(By.xpath("//*[contains(text(),'Logout')]"));
 
 	}
-	
-	public void userLogout () {
-		
+
+	// Methods
+
+	public void userLogout() {
+
 		this.getNameField().click();
 		this.getLogout().click();
 	}

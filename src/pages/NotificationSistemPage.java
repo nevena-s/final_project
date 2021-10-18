@@ -14,20 +14,51 @@ public class NotificationSistemPage extends BasicPage {
 
 	}
 
-	public WebElement getMessageElement() {
+	// Getters
 
+	public WebElement getLoginMessageElement() {
 		return this.driver.findElement(By.xpath(
 				"//*[contains(@class, 'alert--success') or contains(@class, 'alert--danger')][contains(@style,'display: block')]"));
 
 	}
 
-	public String getMsgText() {
-
-		return this.getMessageElement().getText();
+	public String getLoginMsgText() {
+		return this.getLoginMessageElement().getText();
 	}
 
-	public void messageDissapear() {
+	public WebElement getSetupMsgElement() {
+		return this.driver.findElement(By.className("content"));
 
+	}
+
+	public String getSetupMsgText() {
+		return this.getSetupMsgElement().getText();
+
+	}
+
+	public WebElement getMealMsgElementFirst() {
+		return this.driver.findElement(By.className("div_error"));
+
+	}
+
+	public WebElement getMealMsgElementSecond() {
+		return this.driver.findElement(By.xpath("//*[@class ='div_error']/ul/li"));
+
+	}
+
+	public String getMealMsgTextFirst() {
+		return this.getMealMsgElementFirst().getText();
+
+	}
+
+	public String getMealMsgTextSecond() {
+		return this.getMealMsgElementSecond().getText();
+
+	}
+
+	// Methods
+
+	public void messageDissapear() {
 		waiter.until(ExpectedConditions.attributeToBe(By.xpath("//*[contains(@class, 'system_message')]"), "style",
 				"display: none;"));
 	}
